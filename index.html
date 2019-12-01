@@ -378,7 +378,7 @@
         
           
             <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>tws从来未处理过视频流。这次主要研究一下怎么接收解析视频信息。</p>
-<h1 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h1><p>我大概知道Content-Type是<code>multipart/form-data</code>格式，所以首先不做任何转换，将Content-Type和Post直接透传到人脸服务，发现是没有问题的。证明这两个字段是没有问题的</p>
+<h1 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h1><p>我大概知道Content-Type是<code>multipart/form-data</code>格式，所以首先不做任何转换，将Content-Type和Post直接透传到人脸服务，服务响应正常。证明这两个字段是没有问题的</p>
 <h1 id="multipart-form-data"><a href="#multipart-form-data" class="headerlink" title="multipart/form-data"></a>multipart/form-data</h1><p>上面的实验没有问题，说明tws只是将原始的数据全部解析到post字段，我们取出来之后，需要按照multipart/form-data协议进行解析。</p>
 <ol>
 <li>从Content-Type字段中解析boundary字段</li>
