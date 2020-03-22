@@ -87,10 +87,12 @@
 <meta property="og:site_name" content="myronliu">
 <meta property="og:description" content="背景va_list的bug，修改后，在开发环境验证时，发现执行redisCommand函数时，会卡住，直到进程被杀掉重启。为啥生产环境直接进入了第二次循环，没有卡住呢？ 两种情况 redis没有切过master，老的连接有时也不能用，报错Connection reset by peer,这时会自动重连，大概一天2次这种报错，为啥连接会中断，这个还没找到原因。 为何我验证的情景下，请求老的连接时会卡">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-21T11:41:30.463Z">
+<meta property="og:image" content="http://q7kn2bn7i.sabkt.gdipper.com/20200322105936.png">
+<meta property="og:updated_time" content="2020-03-22T04:50:46.404Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="redis连接断开">
 <meta name="twitter:description" content="背景va_list的bug，修改后，在开发环境验证时，发现执行redisCommand函数时，会卡住，直到进程被杀掉重启。为啥生产环境直接进入了第二次循环，没有卡住呢？ 两种情况 redis没有切过master，老的连接有时也不能用，报错Connection reset by peer,这时会自动重连，大概一天2次这种报错，为啥连接会中断，这个还没找到原因。 为何我验证的情景下，请求老的连接时会卡">
+<meta name="twitter:image" content="http://q7kn2bn7i.sabkt.gdipper.com/20200322105936.png">
 
 
 
@@ -389,6 +391,7 @@
 </ol>
 <p>所以当前发到生产环境的版本，redis服务重启的情况，业务模块是可以重连的，网络中断的话，业务模块请求redis时会卡住，直到网络恢复或者middle杀掉进程重启。</p>
 <h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>封禁端口，网卡就不再处理这个端口的包，相当于网线断开了。这种情况下，客户端收不到服务器的任何回包，就会一直等待，如果没有设置超时时间，就卡住了。<br>redis有两个配置，一个是<code>timeout</code>,这个参数如果设置为0，表示服务端不会主动断开连接，非0，表示会清理空闲时间超过这个值的连接。另一个是<code>tcp-keepalive</code>,这个参数表示服务器定时发送ack包探测客户端是否存活。</p>
+<p><img src="http://q7kn2bn7i.sabkt.gdipper.com/20200322105936.png" alt></p>
 
       
     </div>
