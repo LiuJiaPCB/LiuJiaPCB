@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="java,Spring Boot,">
 
 
 
@@ -79,16 +79,20 @@
 
 
 
-<meta name="description" content="一个人的技术水平的提高来自于持续不断的钻研">
-<meta property="og:type" content="website">
-<meta property="og:title" content="myronliu">
-<meta property="og:url" content="http://yoursite.com/archives/2020/03/index.html">
+<meta name="description" content="####多模块pom.xml #####packagingpackaging是项目的打包类型，常用的有如下几种：  war：打包为war包 jar：打包为jar包 pom：用在父级工程或者聚合工程中，做jar包的版本控制  module如果访问了外部的程序，需要在pom中引入依赖 12345&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;org.apache.common">
+<meta name="keywords" content="java,Spring Boot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring Boot多模块踩坑">
+<meta property="og:url" content="http://yoursite.com/2020/03/29/springboot踩坑/index.html">
 <meta property="og:site_name" content="myronliu">
-<meta property="og:description" content="一个人的技术水平的提高来自于持续不断的钻研">
+<meta property="og:description" content="####多模块pom.xml #####packagingpackaging是项目的打包类型，常用的有如下几种：  war：打包为war包 jar：打包为jar包 pom：用在父级工程或者聚合工程中，做jar包的版本控制  module如果访问了外部的程序，需要在pom中引入依赖 12345&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;org.apache.common">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://q7kn2bn7i.sabkt.gdipper.com/bean.jpeg">
+<meta property="og:updated_time" content="2020-03-29T09:45:11.920Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="myronliu">
-<meta name="twitter:description" content="一个人的技术水平的提高来自于持续不断的钻研">
+<meta name="twitter:title" content="Spring Boot多模块踩坑">
+<meta name="twitter:description" content="####多模块pom.xml #####packagingpackaging是项目的打包类型，常用的有如下几种：  war：打包为war包 jar：打包为jar包 pom：用在父级工程或者聚合工程中，做jar包的版本控制  module如果访问了外部的程序，需要在pom中引入依赖 12345&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;org.apache.common">
+<meta name="twitter:image" content="http://q7kn2bn7i.sabkt.gdipper.com/bean.jpeg">
 
 
 
@@ -118,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2020/03/">
+  <link rel="canonical" href="http://yoursite.com/2020/03/29/springboot踩坑/">
 
 
 
 
 
-  <title>归档 | myronliu</title>
+  <title>Spring Boot多模块踩坑 | myronliu</title>
   
 
 
@@ -143,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -269,142 +273,197 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/29/springboot踩坑/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content>
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="myronliu">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">Spring Boot多模块踩坑</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-29T14:35:17+08:00">
+                2020-03-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 9 篇日志。 继续努力。
-      </span>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2020">2020</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/03/29/springboot踩坑/" itemprop="url">
-              
-                <span itemprop="name">Spring Boot多模块踩坑</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-03-29T14:35:17+08:00" content="2020-03-29">
-          03-29
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/03/21/redis连接断开/" itemprop="url">
-              
-                <span itemprop="name">redis连接断开</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-03-21T16:49:27+08:00" content="2020-03-21">
-          03-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <p>####多模块pom.xml</p>
+<p>#####packaging<br>packaging是项目的打包类型，常用的有如下几种：</p>
+<ul>
+<li>war：打包为war包</li>
+<li>jar：打包为jar包</li>
+<li>pom：用在父级工程或者聚合工程中，做jar包的版本控制</li>
+</ul>
+<p>module如果访问了外部的程序，需要在pom中引入依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apache.commons&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;commons-exec&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.3&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
 
-        
-        
+<p>####注入问题</p>
+<p><img src="http://q7kn2bn7i.sabkt.gdipper.com/bean.jpeg" alt></p>
+<p>解决方法</p>
+<ul>
+<li><p>添加包扫描</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span>(scanBasePackages=&#123;<span class="string">"com.fusionbank"</span>&#125;)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorldApplication</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(HelloWorldApplication.class, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>移动application文件到com.fusionbank层级，本质也是为了扫描到这个层级下的包</p>
+</li>
+</ul>
+<h4 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h4><p>写了一个java的middle server，在里面调用的middle版本的server，请求过去后，看java的日志，只打印了</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2020</span>-<span class="number">03</span>-<span class="number">29</span> <span class="number">11</span>:<span class="number">50</span>:<span class="number">48.542</span> [nioEventLoopGroup-<span class="number">3</span>-<span class="number">3</span>] ^[[<span class="number">39</span>mDEBUG^[[<span class="number">0</span>;<span class="number">39</span>m c.f.m.a.framework.server.RpcRequestProcessService - middle call service:get_id</span><br></pre></td></tr></table></figure>
 
-        
+<p>后来发现</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> Builder <span class="title">setTableName</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">          java.lang.String value)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (value == <span class="keyword">null</span>) &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> NullPointerException();</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/03/14/python异步/" itemprop="url">
-              
-                <span itemprop="name">python异步</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-03-14T19:51:55+08:00" content="2020-03-14">
-          03-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+<p>这里set时传入的字符串未设置，抛出来了异常没有捕捉</p>
 
       
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/Spring-Boot/" rel="tag"># Spring Boot</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/03/21/redis连接断开/" rel="next" title="redis连接断开">
+                <i class="fa fa-chevron-left"></i> redis连接断开
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -412,6 +471,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -432,8 +495,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -493,6 +565,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#异常"><span class="nav-number">1.</span> <span class="nav-text">异常</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -633,6 +721,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
