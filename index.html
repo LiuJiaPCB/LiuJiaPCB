@@ -398,12 +398,30 @@
 </li>
 </ul>
 <p>在pom.xml中增加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">  &lt;groupId&gt;org.slf4j&lt;/groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;slf4j-nop&lt;/artifactId&gt;</span><br><span class="line">  &lt;exclusions&gt;</span><br><span class="line">    &lt;exclusion&gt;</span><br><span class="line">      &lt;groupId&gt;*&lt;/groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;*&lt;/artifactId&gt;</span><br><span class="line">    &lt;/exclusion&gt;</span><br><span class="line">  &lt;/exclusions&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">  &lt;groupId&gt;org.slf4j&lt;/groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;slf4j-nop&lt;/artifactId&gt;</span><br><span class="line">  &lt;exclusions&gt;</span><br><span class="line">    &lt;exclusion&gt;</span><br><span class="line">      &lt;groupId&gt;*&lt;/groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;*&lt;/artifactId&gt;</span><br><span class="line">    &lt;/exclusion&gt;</span><br><span class="line">  &lt;/exclusions&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
 
 <p>这样相当于全局排除了slf4j-nop</p>
 <ol start="4">
-<li>jar包内部构造</li>
+<li><p>jar包内部构造</p>
+</li>
+<li><p>打印db查询语句</p>
+</li>
 </ol>
+<p>在mybatis-config.xml中设置    </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">setting</span> <span class="attr">name</span>=<span class="string">"logImpl"</span> <span class="attr">value</span>=<span class="string">"SLF4J"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在logback.xml中配置</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">logger</span> <span class="attr">name</span>=<span class="string">"com.fusionbank.base.ekyc.dao"</span> <span class="attr">level</span>=<span class="string">"DEBUG"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>打印中文乱码</li>
+</ol>
+<p>中文解密出来后，首先编码为UTF-8格式</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">decryptString</span><span class="params">(String sourceStr)</span></span></span><br><span class="line"><span class="function">        <span class="keyword">throws</span> KeyException, UnsupportedEncodingException </span>&#123;</span><br><span class="line">    KeyApi keyApi = <span class="keyword">new</span> KeyApi();</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> String(keyApi.decrypt2(ekycProperties.getSecretKey(), sourceStr,</span><br><span class="line">            <span class="number">0</span>), StandardCharsets.UTF_8);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>写入文件时，指定UTF-8</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">BufferedWriter bw = <span class="keyword">new</span> BufferedWriter(</span><br><span class="line">                    <span class="keyword">new</span> OutputStreamWriter(<span class="keyword">new</span> FileOutputStream(<span class="string">"/tmp/tu_result.txt"</span>),</span><br><span class="line">                            StandardCharsets.UTF_8));</span><br></pre></td></tr></table></figure>
+
 
           
         
