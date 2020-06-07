@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="java异常  java gson fastjson   rest接口，class上注解@RestController，然后返回的对象会自动转换为json格式，使用的是Jackson，如果返回的对象中有datetime格式的字段，返回的格式是这样的 12020-04-24T07:31:40.000+0000  需要设置jackson格式 12spring.jackson.date-format=">
+<meta name="description" content="java异常java gson fastjsonrest接口，class上注解@RestController，然后返回的对象会自动转换为json格式，使用的是Jackson，如果返回的对象中有datetime格式的字段，返回的格式是这样的 12020-04-24T07:31:40.000+0000  需要设置jackson格式 12spring.jackson.date-format=yyyy-M">
 <meta name="keywords" content="java,Spring Boot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java填坑">
 <meta property="og:url" content="http://yoursite.com/2020/04/04/java填坑/index.html">
 <meta property="og:site_name" content="myronliu">
-<meta property="og:description" content="java异常  java gson fastjson   rest接口，class上注解@RestController，然后返回的对象会自动转换为json格式，使用的是Jackson，如果返回的对象中有datetime格式的字段，返回的格式是这样的 12020-04-24T07:31:40.000+0000  需要设置jackson格式 12spring.jackson.date-format=">
+<meta property="og:description" content="java异常java gson fastjsonrest接口，class上注解@RestController，然后返回的对象会自动转换为json格式，使用的是Jackson，如果返回的对象中有datetime格式的字段，返回的格式是这样的 12020-04-24T07:31:40.000+0000  需要设置jackson格式 12spring.jackson.date-format=yyyy-M">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-06-06T05:31:07.816Z">
+<meta property="og:updated_time" content="2020-06-06T06:16:47.924Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java填坑">
-<meta name="twitter:description" content="java异常  java gson fastjson   rest接口，class上注解@RestController，然后返回的对象会自动转换为json格式，使用的是Jackson，如果返回的对象中有datetime格式的字段，返回的格式是这样的 12020-04-24T07:31:40.000+0000  需要设置jackson格式 12spring.jackson.date-format=">
+<meta name="twitter:description" content="java异常java gson fastjsonrest接口，class上注解@RestController，然后返回的对象会自动转换为json格式，使用的是Jackson，如果返回的对象中有datetime格式的字段，返回的格式是这样的 12020-04-24T07:31:40.000+0000  需要设置jackson格式 12spring.jackson.date-format=yyyy-M">
 
 
 
@@ -374,22 +374,13 @@
       
 
       
-        <ol>
-<li><p>java异常</p>
-</li>
-<li><p>java gson fastjson</p>
-</li>
-</ol>
-<p>rest接口，class上注解@RestController，然后返回的对象会自动转换为json格式，使用的是Jackson，如果返回的对象中有datetime格式的字段，返回的格式是这样的</p>
+        <h3 id="java异常"><a href="#java异常" class="headerlink" title="java异常"></a>java异常</h3><h3 id="java-gson-fastjson"><a href="#java-gson-fastjson" class="headerlink" title="java gson fastjson"></a>java gson fastjson</h3><p>rest接口，class上注解@RestController，然后返回的对象会自动转换为json格式，使用的是Jackson，如果返回的对象中有datetime格式的字段，返回的格式是这样的</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2020-04-24T07:31:40.000+0000</span><br></pre></td></tr></table></figure>
 
 <p>需要设置jackson格式</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">spring.jackson.date-format=yyyy-MM-dd HH:mm:ss</span><br><span class="line">spring.jackson.time-zone=GMT+8</span><br></pre></td></tr></table></figure>
 
-<ol start="3">
-<li>排除全局包</li>
-</ol>
-<ul>
+<h3 id="排除全局包"><a href="#排除全局包" class="headerlink" title="排除全局包"></a>排除全局包</h3><ul>
 <li>模块启动时报错<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">java -jar web_vb_base_ekyc.jar</span><br><span class="line">SLF4J: Class path contains multiple SLF4J bindings.</span><br><span class="line">SLF4J: Found binding in [jar:file:/data/apps/web_vb_base_ekyc/web_vb_base_ekyc.jar!/BOOT-INF/lib/slf4j-nop-1.7.29.jar!/org/slf4j/impl/StaticLoggerBinder.class]</span><br><span class="line">SLF4J: Found binding in [jar:file:/data/apps/web_vb_base_ekyc/web_vb_base_ekyc.jar!/BOOT-INF/lib/logback-classic-1.2.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]</span><br><span class="line">SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.</span><br><span class="line">SLF4J: Actual binding is of type [org.slf4j.helpers.NOPLoggerFactory]</span><br></pre></td></tr></table></figure>
 
 </li>
@@ -398,22 +389,13 @@
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">  &lt;groupId&gt;org.slf4j&lt;/groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;slf4j-nop&lt;/artifactId&gt;</span><br><span class="line">  &lt;exclusions&gt;</span><br><span class="line">    &lt;exclusion&gt;</span><br><span class="line">      &lt;groupId&gt;*&lt;/groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;*&lt;/artifactId&gt;</span><br><span class="line">    &lt;/exclusion&gt;</span><br><span class="line">  &lt;/exclusions&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
 
 <p>这样相当于全局排除了slf4j-nop</p>
-<ol start="4">
-<li><p>jar包内部构造</p>
-</li>
-<li><p>打印db查询语句</p>
-</li>
-</ol>
-<p>在mybatis-config.xml中设置    </p>
+<h3 id="jar包内部构造"><a href="#jar包内部构造" class="headerlink" title="jar包内部构造"></a>jar包内部构造</h3><h3 id="打印db查询语句"><a href="#打印db查询语句" class="headerlink" title="打印db查询语句"></a>打印db查询语句</h3><p>在mybatis-config.xml中设置    </p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">setting</span> <span class="attr">name</span>=<span class="string">"logImpl"</span> <span class="attr">value</span>=<span class="string">"SLF4J"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>在logback.xml中配置</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">logger</span> <span class="attr">name</span>=<span class="string">"com.fusionbank.base.ekyc.dao"</span> <span class="attr">level</span>=<span class="string">"DEBUG"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 
-<ol start="6">
-<li>打印中文乱码</li>
-</ol>
-<p>中文解密出来后，首先编码为UTF-8格式</p>
+<h3 id="打印中文乱码"><a href="#打印中文乱码" class="headerlink" title="打印中文乱码"></a>打印中文乱码</h3><p>中文解密出来后，首先编码为UTF-8格式</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">decryptString</span><span class="params">(String sourceStr)</span></span></span><br><span class="line"><span class="function">        <span class="keyword">throws</span> KeyException, UnsupportedEncodingException </span>&#123;</span><br><span class="line">    KeyApi keyApi = <span class="keyword">new</span> KeyApi();</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> String(keyApi.decrypt2(ekycProperties.getSecretKey(), sourceStr,</span><br><span class="line">            <span class="number">0</span>), StandardCharsets.UTF_8);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>写入文件时，指定UTF-8</p>
@@ -460,6 +442,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/06/06/java安全/" rel="prev" title="java安全">
+                java安全 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -511,8 +497,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -527,7 +522,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -538,7 +533,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -549,7 +544,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -572,6 +567,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#java异常"><span class="nav-number">1.</span> <span class="nav-text">java异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#java-gson-fastjson"><span class="nav-number">2.</span> <span class="nav-text">java gson fastjson</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排除全局包"><span class="nav-number">3.</span> <span class="nav-text">排除全局包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jar包内部构造"><span class="nav-number">4.</span> <span class="nav-text">jar包内部构造</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打印db查询语句"><span class="nav-number">5.</span> <span class="nav-text">打印db查询语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打印中文乱码"><span class="nav-number">6.</span> <span class="nav-text">打印中文乱码</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
