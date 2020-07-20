@@ -284,6 +284,267 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/15/多模块mapper扫描/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content>
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="myronliu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/07/15/多模块mapper扫描/" itemprop="url">多模块mapper扫描</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-15T16:00:20+08:00">
+                2020-07-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/07/java-grpc初体验/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content>
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="myronliu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/06/07/java-grpc初体验/" itemprop="url">java grpc初体验</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-07T17:27:46+08:00">
+                2020-06-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://www.grpc.io/docs/languages/java/basics/" target="_blank" rel="noopener">文档</a></p>
+<h3 id="定义proto"><a href="#定义proto" class="headerlink" title="定义proto"></a>定义proto</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line">syntax = &quot;proto3&quot;;</span><br><span class="line"></span><br><span class="line">option java_multiple_files = true;</span><br><span class="line">option java_package = &quot;io.grpc.examples.routeguide&quot;;</span><br><span class="line">option java_outer_classname = &quot;RouteGuideProto&quot;;</span><br><span class="line">option objc_class_prefix = &quot;RTG&quot;;</span><br><span class="line"></span><br><span class="line">package routeguide;</span><br><span class="line"></span><br><span class="line">// Interface exported by the server.</span><br><span class="line">service RouteGuide &#123;</span><br><span class="line">  // A simple RPC.</span><br><span class="line">  //</span><br><span class="line">  // Obtains the feature at a given position.</span><br><span class="line">  //</span><br><span class="line">  // A feature with an empty name is returned if there&apos;s no feature at the given</span><br><span class="line">  // position.</span><br><span class="line">  rpc GetFeature(Point) returns (Feature) &#123;&#125;</span><br><span class="line"></span><br><span class="line">  // A server-to-client streaming RPC.</span><br><span class="line">  //</span><br><span class="line">  // Obtains the Features available within the given Rectangle.  Results are</span><br><span class="line">  // streamed rather than returned at once (e.g. in a response message with a</span><br><span class="line">  // repeated field), as the rectangle may cover a large area and contain a</span><br><span class="line">  // huge number of features.</span><br><span class="line">  rpc ListFeatures(Rectangle) returns (stream Feature) &#123;&#125;</span><br><span class="line"></span><br><span class="line">  // A client-to-server streaming RPC.</span><br><span class="line">  //</span><br><span class="line">  // Accepts a stream of Points on a route being traversed, returning a</span><br><span class="line">  // RouteSummary when traversal is completed.</span><br><span class="line">  rpc RecordRoute(stream Point) returns (RouteSummary) &#123;&#125;</span><br><span class="line"></span><br><span class="line">  // A Bidirectional streaming RPC.</span><br><span class="line">  //</span><br><span class="line">  // Accepts a stream of RouteNotes sent while a route is being traversed,</span><br><span class="line">  // while receiving other RouteNotes (e.g. from other users).</span><br><span class="line">  rpc RouteChat(stream RouteNote) returns (stream RouteNote) &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// Points are represented as latitude-longitude pairs in the E7 representation</span><br><span class="line">// (degrees multiplied by 10**7 and rounded to the nearest integer).</span><br><span class="line">// Latitudes should be in the range +/- 90 degrees and longitude should be in</span><br><span class="line">// the range +/- 180 degrees (inclusive).</span><br><span class="line">message Point &#123;</span><br><span class="line">  int32 latitude = 1;</span><br><span class="line">  int32 longitude = 2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// A latitude-longitude rectangle, represented as two diagonally opposite</span><br><span class="line">// points &quot;lo&quot; and &quot;hi&quot;.</span><br><span class="line">message Rectangle &#123;</span><br><span class="line">  // One corner of the rectangle.</span><br><span class="line">  Point lo = 1;</span><br><span class="line"></span><br><span class="line">  // The other corner of the rectangle.</span><br><span class="line">  Point hi = 2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// A feature names something at a given point.</span><br><span class="line">//</span><br><span class="line">// If a feature could not be named, the name is empty.</span><br><span class="line">message Feature &#123;</span><br><span class="line">  // The name of the feature.</span><br><span class="line">  string name = 1;</span><br><span class="line"></span><br><span class="line">  // The point where the feature is detected.</span><br><span class="line">  Point location = 2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// Not used in the RPC.  Instead, this is here for the form serialized to disk.</span><br><span class="line">message FeatureDatabase &#123;</span><br><span class="line">  repeated Feature feature = 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// A RouteNote is a message sent while at a given point.</span><br><span class="line">message RouteNote &#123;</span><br><span class="line">  // The location from which the message is sent.</span><br><span class="line">  Point location = 1;</span><br><span class="line"></span><br><span class="line">  // The message to be sent.</span><br><span class="line">  string message = 2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// A RouteSummary is received in response to a RecordRoute rpc.</span><br><span class="line">//</span><br><span class="line">// It contains the number of individual points received, the number of</span><br><span class="line">// detected features, and the total distance covered as the cumulative sum of</span><br><span class="line">// the distance between each point.</span><br><span class="line">message RouteSummary &#123;</span><br><span class="line">  // The number of points received.</span><br><span class="line">  int32 point_count = 1;</span><br><span class="line"></span><br><span class="line">  // The number of known features passed while traversing the route.</span><br><span class="line">  int32 feature_count = 2;</span><br><span class="line"></span><br><span class="line">  // The distance covered in metres.</span><br><span class="line">  int32 distance = 3;</span><br><span class="line"></span><br><span class="line">  // The duration of the traversal in seconds.</span><br><span class="line">  int32 elapsed_time = 4;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/06/java安全/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -377,8 +638,16 @@
       
         
           
-            <h3 id="mybatis-SQL注入"><a href="#mybatis-SQL注入" class="headerlink" title="mybatis SQL注入"></a>mybatis SQL注入</h3><p>mybatis中#{}表示预编译，${}表示拼接，order by不能做预编译，假如给<code>Flast_update_time</code>排序，预编译后，就变成了order by “Flast_update_time”，所以还是需要使用拼接，这里要注意防注入。</p>
+            <h3 id="mybatis-SQL注入"><a href="#mybatis-SQL注入" class="headerlink" title="mybatis SQL注入"></a>mybatis SQL注入</h3><h5 id="order-by"><a href="#order-by" class="headerlink" title="order by"></a>order by</h5><p>mybatis中#{}表示预编译，${}表示拼接，order by不能做预编译，假如给<code>Flast_update_time</code>排序，预编译后，就变成了order by “Flast_update_time”，所以还是需要使用拼接，这里要注意防注入。</p>
 <p>我理解本质原因是预编译后，会给传入的字符串加上双引号。所以order by这种是无法做预编译的，只能拼接。</p>
+<h5 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h5><p>order by的字段不直接拼接前端传入的字符串，而是通过映射转换为实际的字段，这样就可以避免注入</p>
+<h5 id="like"><a href="#like" class="headerlink" title="like"></a>like</h5><p>如果使用like模糊查询时，如果这样使用，语法会有问题，还是因为双引号。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from xxx where xxx like &apos;%#&#123;title&#125;%&apos;</span><br></pre></td></tr></table></figure>
+
+<h6 id="解决方法-1"><a href="#解决方法-1" class="headerlink" title="解决方法"></a>解决方法</h6><p>使用concat函数做拼接。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from xxx where xxx like concat(&apos;%&apos;,#&#123;xxx&#125;, &apos;%&apos;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="in查询"><a href="#in查询" class="headerlink" title="in查询"></a>in查询</h5><h5 id="解决方法-2"><a href="#解决方法-2" class="headerlink" title="解决方法"></a>解决方法</h5><p>使用Mybatis自带循环指令</p>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MjM5OTk2MTMxOQ==&mid=2727827368&idx=1&sn=765d0835f0069b5145523c31e8229850&mpshare=1&scene=1&srcid=0926a6QC3pGbQ3Pznszb4n2q#rd" target="_blank" rel="noopener">Mybatis框架下SQL注入漏洞面面观</a></p>
 <p><a href="https://blog.csdn.net/Mint6/article/details/78039935" target="_blank" rel="noopener">Mybatis使用order by排序使用#无法正确执行的解决之#与$的区别</a></p>
 
@@ -1525,299 +1794,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/24/go-slice/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content>
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="myronliu">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/06/24/go-slice/" itemprop="url">go slice</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-24T21:00:52+08:00">
-                2019-06-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">func Reverse(s []int) &#123;</span><br><span class="line">    s = append(s, 999)</span><br><span class="line">    for i, j := 0, len(s)-1; i &lt; j; i++ &#123;</span><br><span class="line">        j = len(s) - (i + 1)</span><br><span class="line">        s[i], s[j] = s[j], s[i]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">    s := []int&#123;1, 2, 3&#125;</span><br><span class="line">    Reverse(s)</span><br><span class="line">    fmt.Println(s) // [1 2 3]</span><br><span class="line"></span><br><span class="line">    var a []int</span><br><span class="line">    for i := 1; i &lt;= 3; i++ &#123;</span><br><span class="line">        a = append(a, i)</span><br><span class="line">    &#125;</span><br><span class="line">    Reverse(a)</span><br><span class="line">    fmt.Println(a) // [999 3 2]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在传入Reverse2函数之前，切片的cap不一致，这导致了在函数中append后，第一个函数中，s指向第一个元素的地址发生了变化，修改的不再是函数外的切片。<br>第二个函数经过3次append，cap已经是4了，这样即使在函数中再append一次，内存也不会发生再次分配，这样修改的还是函数外的切片。<br>为了验证这一点，我们可以把地址都打印出来：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">func Reverse(s []int) &#123;</span><br><span class="line">    s = append(s, 999)</span><br><span class="line">    for i, j := 0, len(s)-1; i &lt; j; i++ &#123;</span><br><span class="line">        j = len(s) - (i + 1)</span><br><span class="line">        s[i], s[j] = s[j], s[i]</span><br><span class="line">    &#125;</span><br><span class="line">    fmt.Printf(&quot;[in function] s:%p, first element:%p, len:%d, cap:%d\n&quot;,&amp;s,s,len(s),cap(s))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">    s := []int&#123;1, 2, 3&#125;</span><br><span class="line">    fmt.Printf(&quot;[main] s:%p, first element:%p, len:%d, cap:%d\n&quot;,&amp;s,s,len(s),cap(s))</span><br><span class="line">    Reverse(s)</span><br><span class="line">    fmt.Println(s) // [1 2 3]</span><br><span class="line"></span><br><span class="line">    var a []int</span><br><span class="line">    for i := 1; i &lt;= 3; i++ &#123;</span><br><span class="line">        a = append(a, i)</span><br><span class="line">    &#125;</span><br><span class="line">    fmt.Printf(&quot;[main] a:%p, first element:%p, len:%d, cap:%d\n&quot;,&amp;a,a,len(a),cap(a))</span><br><span class="line">    Reverse(a)</span><br><span class="line">    fmt.Println(a) // [999 3 2]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>打印如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">➜  [/Users/rootliu/go/src/6.824/demo] git:(master) ✗ go run demo.go</span><br><span class="line">[main] s:0xc00000a060, first element:0xc000018160, len:3, cap:3</span><br><span class="line">[in function] s:0xc00000a0a0, first element:0xc00001a0f0, len:4, cap:6</span><br><span class="line">[1 2 3]</span><br><span class="line">[main] a:0xc00000a100, first element:0xc0000181a0, len:3, cap:4</span><br><span class="line">[in function] s:0xc00000a140, first element:0xc0000181a0, len:4, cap:4</span><br><span class="line">[999 3 2]</span><br></pre></td></tr></table></figure>
-
-<p>可以得出结论：<br>1、函数参数切片时值传递，因为切片在函数中的地址跟外层不一样<br>2、发生内存扩充时，cap变了，指向第一个元素的地址也发生了变化</p>
-<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p><a href="https://www.sohamkamani.com/blog/golang/arrays-vs-slices/" target="_blank" rel="noopener">理解 Go 的 Array 和 Slice</a><br><a href="https://stackoverflow.com/questions/52380391/print-address-of-slice-in-golang" target="_blank" rel="noopener">Print address of slice in golang</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/20/6-824/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content>
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="myronliu">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/06/20/6-824/" itemprop="url">6.824</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-20T20:51:34+08:00">
-                2019-06-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://stackoverflow.com/questions/3225862/multiple-github-accounts-ssh-config" target="_blank" rel="noopener">multiple-github-accounts-ssh-config</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1868,7 +1844,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1890,7 +1866,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
